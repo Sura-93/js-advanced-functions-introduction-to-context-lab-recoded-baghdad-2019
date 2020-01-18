@@ -33,7 +33,7 @@ function createTimeOutEvent(obj, dateStamp) {
     let date = dateStamp.split(" ")
    let timeObj = {
         type: "TimeOut"
-        , date: date[0] 
+        , date: date[0]
         , hour: parseInt(date[1])
     }
     obj.timeOutEvents.push(timeObj)
@@ -41,7 +41,7 @@ function createTimeOutEvent(obj, dateStamp) {
 }
 
 function hoursWorkedOnDate(obj, date) {
-    
+
     for (let i = 0; i < obj.timeInEvents.length; i++) {
         if (obj.timeInEvents[i].date == date && obj.timeOutEvents[i].date == date) {
           return (obj.timeOutEvents[i].hour- obj.timeInEvents[i].hour)/100
@@ -72,7 +72,7 @@ function createEmployeeRecords(arrayOfArray){
 }
 
  function findEmployeeByFirstName(srcArray,firstName){
- 
+
     for(let i=0;i<srcArray.length;i++){
        if(srcArray[i].firstName===firstName){
            return srcArray[i]
